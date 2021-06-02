@@ -17,10 +17,10 @@ class HomeViewModel {
     
     private let disposeBag = DisposeBag()
     
-    public func requestData() {
+    public func requestData(with query: String) {
         self.loading.onNext(true)
         
-        WebService().animes(query: "naruto") { result in
+        WebService().animes(query: query) { result in
             self.loading.onNext(false)
             
             switch result {
@@ -29,6 +29,7 @@ class HomeViewModel {
                 self.animes.onNext(animes)
             case let .failure(error):
                 print(error.localizedDescription)
+                self.animes.onNext([])
                 self.error.onNext(error)
             }
         }

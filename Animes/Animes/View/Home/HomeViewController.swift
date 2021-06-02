@@ -23,8 +23,6 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
-        
-        homeViewModel.requestData()
     }
     
     // MARK: - Bindings
@@ -33,8 +31,27 @@ final class HomeViewController: UIViewController {
             .error
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: {error in
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                self.present(alert, animated: true)
+                /*let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let actionOk = UIAlertAction(title: "OK", style: .default) { action in
+                }
+                alert.addAction(actionOk)
+                self.present(alert, animated: true)*/
+                print(error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
+        
+
+        homeView.searchBar.searchTextField.rx
+            .controlEvent(.editingChanged)
+            .asObservable()
+            .subscribe({[weak self] _ in
+                let query = self?.homeView.searchBar.searchTextField.text!.replacingOccurrences(of: " ", with: "")
+                if query != "" {
+                    self?.homeViewModel.requestData(with: query!)
+                }
+                else {
+                    self?.homeViewModel.animes.onNext([])
+                }
             })
             .disposed(by: disposeBag)
         
@@ -45,6 +62,14 @@ final class HomeViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
+        homeView.tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                let animeCell = self?.homeView.tableView.cellForRow(at: indexPath) as? AnimeTableCell
+                
+                let animeDetailVC = AnimeDetailViewController()
+                self?.navigationController?.pushViewController(animeDetailVC, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 
 }

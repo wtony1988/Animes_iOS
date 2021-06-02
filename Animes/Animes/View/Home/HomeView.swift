@@ -9,6 +9,12 @@ import UIKit
 
 
 final class HomeView: UIView {
+    let searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: .zero)
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
     let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.tableFooterView = UIView()
@@ -17,15 +23,18 @@ final class HomeView: UIView {
         return tableView
     }()
     
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [searchBar, tableView])
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
-        addSubview(tableView)
-
-        topAnchor.constraint(equalTo: tableView.topAnchor, constant: 0.0).isActive = true
-        bottomAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 0.0).isActive = true
-        leadingAnchor.constraint(equalTo: tableView.leadingAnchor, constant: -16.0).isActive = true
-        trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: 16.0).isActive = true
+        safelyAddSubview(stackView)
+        stackView.marginToSuperviewSafeArea(top: 0, bottom: 0, leading: 0, trailing: 0)
     }
     
     @available(*, unavailable) required init?(coder: NSCoder) {

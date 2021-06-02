@@ -54,7 +54,7 @@ class AnimeTableCell: UITableViewCell {
     private func commonInit() {
         backgroundColor = .white
         safelyAddSubview(stackView)
-        stackView.marginToSuperviewSafeArea(top: 12, bottom: 12, leading: 16, trailing: 0)
+        stackView.marginToSuperviewSafeArea(top: 12, bottom: 12, leading: 16, trailing: 16)
         thumbImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         thumbImageView.heightAnchor.constraint(equalToConstant: 140).isActive = true
     }

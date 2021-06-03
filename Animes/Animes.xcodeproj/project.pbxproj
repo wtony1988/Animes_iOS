@@ -10,6 +10,9 @@
 		150A137126661EF800A95E08 /* AnimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150A137026661EF800A95E08 /* AnimeLabel.swift */; };
 		150A137A26662E4400A95E08 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 150A137926662E4400A95E08 /* SDWebImage */; };
 		150A137F26664E9200A95E08 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150A137E26664E9200A95E08 /* UIView+Layout.swift */; };
+		150ADCA72668EDA300726AA1 /* Date+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150ADCA62668EDA300726AA1 /* Date+Formatted.swift */; };
+		15232A252668876800406BBD /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15232A242668876800406BBD /* AnimeDetailView.swift */; };
+		15232A2D2668CEE400406BBD /* AnimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15232A2C2668CEE400406BBD /* AnimeButton.swift */; };
 		154A72F226677D1900ABEB21 /* AnimeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A72F126677D1900ABEB21 /* AnimeDetailViewController.swift */; };
 		154FCDC12664874500A5187A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154FCDC02664874500A5187A /* AppDelegate.swift */; };
 		154FCDC52664874500A5187A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154FCDC42664874500A5187A /* HomeViewController.swift */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		150A137026661EF800A95E08 /* AnimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeLabel.swift; sourceTree = "<group>"; };
 		150A137E26664E9200A95E08 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		150ADCA62668EDA300726AA1 /* Date+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatted.swift"; sourceTree = "<group>"; };
+		15232A242668876800406BBD /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
+		15232A2C2668CEE400406BBD /* AnimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeButton.swift; sourceTree = "<group>"; };
 		154A72F126677D1900ABEB21 /* AnimeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewController.swift; sourceTree = "<group>"; };
 		154FCDBD2664874500A5187A /* Animes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154FCDC02664874500A5187A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,16 +132,28 @@
 		150A136F26661D8C00A95E08 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				150ADCA52668ED8000726AA1 /* Extensions */,
+				154FCE722664D15400A5187A /* Constants.swift */,
 				150A137026661EF800A95E08 /* AnimeLabel.swift */,
-				150A137E26664E9200A95E08 /* UIView+Layout.swift */,
+				15232A2C2668CEE400406BBD /* AnimeButton.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		150ADCA52668ED8000726AA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				150A137E26664E9200A95E08 /* UIView+Layout.swift */,
+				150ADCA62668EDA300726AA1 /* Date+Formatted.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		154A72F026677B6D00ABEB21 /* AnimeDetail */ = {
 			isa = PBXGroup;
 			children = (
 				154A72F126677D1900ABEB21 /* AnimeDetailViewController.swift */,
+				15232A242668876800406BBD /* AnimeDetailView.swift */,
 			);
 			path = AnimeDetail;
 			sourceTree = "<group>";
@@ -231,7 +249,6 @@
 		154FCE662664D05000A5187A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				154FCE722664D15400A5187A /* Constants.swift */,
 				154FCE6A2664D09600A5187A /* Anime.swift */,
 			);
 			path = Model;
@@ -518,16 +535,19 @@
 			files = (
 				150A137F26664E9200A95E08 /* UIView+Layout.swift in Sources */,
 				154FCE622664D03300A5187A /* WebService.swift in Sources */,
+				15232A252668876800406BBD /* AnimeDetailView.swift in Sources */,
 				154FCE732664D15400A5187A /* Constants.swift in Sources */,
 				154FCEA62665ECB700A5187A /* HomeView.swift in Sources */,
 				154FCDCB2664874600A5187A /* Animes.xcdatamodeld in Sources */,
 				154FCDC52664874500A5187A /* HomeViewController.swift in Sources */,
+				15232A2D2668CEE400406BBD /* AnimeButton.swift in Sources */,
 				150A137126661EF800A95E08 /* AnimeLabel.swift in Sources */,
 				154A72F226677D1900ABEB21 /* AnimeDetailViewController.swift in Sources */,
 				154FCE2326649FC800A5187A /* HTTPError.swift in Sources */,
 				154FCE1426649E9000A5187A /* HTTPClient.swift in Sources */,
 				154FCDC12664874500A5187A /* AppDelegate.swift in Sources */,
 				154FCE982664DD5400A5187A /* HomeViewModel.swift in Sources */,
+				150ADCA72668EDA300726AA1 /* Date+Formatted.swift in Sources */,
 				154FCE6B2664D09700A5187A /* Anime.swift in Sources */,
 				154FCE2B2664A2AE00A5187A /* HTTPRequest.swift in Sources */,
 				154FCEAC2665EE6900A5187A /* AnimeTableCell.swift in Sources */,

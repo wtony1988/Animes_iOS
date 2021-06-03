@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum APIConstants {
     static let searchURL = "https://api.jikan.moe/v3/search/anime"
@@ -18,4 +19,11 @@ enum AnimeConstants {
 
 enum CellIdentifiers {
     static let animeTableCell = "AnimeTableCell"
+}
+
+enum AnimeColors {
+    static let primaryButtonColor = UIColor.purple
+}
+
+enum SegueIdentifiers {
 }

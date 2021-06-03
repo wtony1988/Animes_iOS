@@ -14,9 +14,11 @@ struct Anime: Decodable,Equatable {
     let type: String
     let rated: String?
     let score: Double
-    let members: Double
+    let episodes: Int
+    let members: Int
     let imageUrl: String
     let url: String?
     let startDate: Date?
+    let endDate: Date?
 }
 

@@ -25,6 +25,11 @@ final class HomeViewController: UIViewController {
         setupBindings()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     // MARK: - Bindings
     private func setupBindings() {
         homeViewModel
@@ -65,8 +70,7 @@ final class HomeViewController: UIViewController {
         homeView.tableView.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
                 let animeCell = self?.homeView.tableView.cellForRow(at: indexPath) as? AnimeTableCell
-                
-                let animeDetailVC = AnimeDetailViewController()
+                let animeDetailVC = AnimeDetailViewController(anime: animeCell!.anime)
                 self?.navigationController?.pushViewController(animeDetailVC, animated: true)
             })
             .disposed(by: disposeBag)

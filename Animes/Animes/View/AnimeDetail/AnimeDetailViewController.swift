@@ -27,10 +27,17 @@ final class AnimeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailView.anime = self.anime
+        detailView.moreButton.addTarget(self, action: #selector(onMore(sender:)), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    // MARK: - Event Handlers
+    @objc func onMore(sender: UIButton) {
+        let webViewController = WebPageViewController(url: URL(string: anime.url!)!)
+        self.navigationController?.pushViewController(webViewController, animated: true)
     }
 }

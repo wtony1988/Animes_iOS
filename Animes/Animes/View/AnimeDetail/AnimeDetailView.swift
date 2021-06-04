@@ -20,8 +20,8 @@ class AnimeDetailView: UIView {
             scoreLabel.text = String(format: "⭐️ %.02f", anime.score)
             episodesLabel.text = String(format: "Episodes: %d", anime.episodes)
             membersLabel.text = String(format: "Members: %d", anime.members)
-            startDateLabel.text = anime.startDate?.formatted
-            endDateLabel.text = anime.endDate?.formatted
+            startDateLabel.text = "Start date: " + (anime.startDate?.formatted ?? "N/A")
+            endDateLabel.text = "End date: " + (anime.endDate?.formatted ?? "N/A")
         }
     }
     
@@ -71,6 +71,6 @@ class AnimeDetailView: UIView {
     private func commonInit() {
         backgroundColor = .white
         safelyAddSubview(stackView)
-        stackView.marginToSuperviewSafeArea(top: 0, bottom: 0, leading: 16, trailing: 16)
+        stackView.marginToSuperviewSafeArea(top: 16, bottom: 0, leading: 16, trailing: 16)
     }
 }

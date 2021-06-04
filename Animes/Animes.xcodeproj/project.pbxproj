@@ -34,6 +34,8 @@
 		154FCE982664DD5400A5187A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154FCE972664DD5400A5187A /* HomeViewModel.swift */; };
 		154FCEA62665ECB700A5187A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154FCEA52665ECB700A5187A /* HomeView.swift */; };
 		154FCEAC2665EE6900A5187A /* AnimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154FCEAB2665EE6900A5187A /* AnimeTableCell.swift */; };
+		15B9D401266A2829002E9619 /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9D400266A2829002E9619 /* WebPageViewController.swift */; };
+		15B9D406266A284F002E9619 /* WebPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9D405266A284F002E9619 /* WebPageView.swift */; };
 		254D688CE76A4A32D2C10841 /* Pods_Animes_AnimesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC58040276E0DCE5ECECCA /* Pods_Animes_AnimesUITests.framework */; };
 		34885031ABEAAF4E11CFD68A /* Pods_Animes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4CB25F05B6EEC791E23BA5 /* Pods_Animes.framework */; };
 		CF52CEB1D19D128B89649013 /* Pods_AnimesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45B8C1DC815181BFD43C4EB /* Pods_AnimesTests.framework */; };
@@ -88,6 +90,8 @@
 		154FCE972664DD5400A5187A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		154FCEA52665ECB700A5187A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		154FCEAB2665EE6900A5187A /* AnimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTableCell.swift; sourceTree = "<group>"; };
+		15B9D400266A2829002E9619 /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		15B9D405266A284F002E9619 /* WebPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageView.swift; sourceTree = "<group>"; };
 		3993193DBD2A08D3934F84FD /* Pods-Animes-AnimesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animes-AnimesUITests.release.xcconfig"; path = "Target Support Files/Pods-Animes-AnimesUITests/Pods-Animes-AnimesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C4CB25F05B6EEC791E23BA5 /* Pods_Animes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		610F51A57607A87F481E3564 /* Pods-AnimesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimesTests.release.xcconfig"; path = "Target Support Files/Pods-AnimesTests/Pods-AnimesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		154FCE962664DD2A00A5187A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15B9D3FF266A2793002E9619 /* Web */,
 				154FCEAA2665EDEF00A5187A /* Home */,
 				154A72F026677B6D00ABEB21 /* AnimeDetail */,
 			);
@@ -272,6 +277,15 @@
 				154FCDC42664874500A5187A /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		15B9D3FF266A2793002E9619 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				15B9D400266A2829002E9619 /* WebPageViewController.swift */,
+				15B9D405266A284F002E9619 /* WebPageView.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		CE2E76937C1427A5E512302A /* Pods */ = {
@@ -539,6 +553,7 @@
 				154FCE732664D15400A5187A /* Constants.swift in Sources */,
 				154FCEA62665ECB700A5187A /* HomeView.swift in Sources */,
 				154FCDCB2664874600A5187A /* Animes.xcdatamodeld in Sources */,
+				15B9D401266A2829002E9619 /* WebPageViewController.swift in Sources */,
 				154FCDC52664874500A5187A /* HomeViewController.swift in Sources */,
 				15232A2D2668CEE400406BBD /* AnimeButton.swift in Sources */,
 				150A137126661EF800A95E08 /* AnimeLabel.swift in Sources */,
@@ -550,6 +565,7 @@
 				150ADCA72668EDA300726AA1 /* Date+Formatted.swift in Sources */,
 				154FCE6B2664D09700A5187A /* Anime.swift in Sources */,
 				154FCE2B2664A2AE00A5187A /* HTTPRequest.swift in Sources */,
+				15B9D406266A284F002E9619 /* WebPageView.swift in Sources */,
 				154FCEAC2665EE6900A5187A /* AnimeTableCell.swift in Sources */,
 				154FCE1926649EF000A5187A /* SessionManager_Protocol.swift in Sources */,
 				154FCE1E26649F5F00A5187A /* HTTPResponseHandler_Protocol.swift in Sources */,

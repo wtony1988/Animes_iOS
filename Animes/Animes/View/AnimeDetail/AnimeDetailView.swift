@@ -59,7 +59,11 @@ class AnimeDetailView: UIView {
     let membersLabel = AnimeLabel(style: .subheadline)
     let startDateLabel = AnimeLabel(style: .subheadline)
     let endDateLabel = AnimeLabel(style: .subheadline)
-    let moreButton = AnimeButton(title: "More Button")
+    let moreButton: AnimeButton = {
+        let button = AnimeButton()
+        button.setTitle("More Detail", for: .normal)
+        return button
+    }()
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel, synopsisLabel, subInfoStackView, episodesLabel, membersLabel, startDateLabel, endDateLabel, moreButton])

@@ -9,9 +9,8 @@ import UIKit
 
 class AnimeButton: UIButton {
 
-    public init(title: String, color: UIColor = AnimeColors.primaryButtonColor) {
+    public init(color: UIColor = AnimeColors.primaryButtonColor) {
         super.init(frame: .zero)
-        self.setTitle(title, for: .normal)
         self.setTitleColor(color, for: .normal)
         self.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         self.layer.masksToBounds = true

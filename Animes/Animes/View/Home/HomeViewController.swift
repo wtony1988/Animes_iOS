@@ -72,6 +72,14 @@ final class HomeViewController: UIViewController {
                 let animeCell = self?.homeView.tableView.cellForRow(at: indexPath) as? AnimeTableCell
                 let animeDetailVC = AnimeDetailViewController(anime: animeCell!.anime)
                 self?.navigationController?.pushViewController(animeDetailVC, animated: true)
+                
+                /*guard let anime = animeCell?.anime else {
+                    return
+                }
+                let storyboard = UIStoryboard(name: "AnimeDetail", bundle: nil)
+                let animeDetailVC = storyboard.instantiateInitialViewController() as! AnimeDetail2ViewController
+                animeDetailVC.anime = anime
+                self?.navigationController?.pushViewController(animeDetailVC, animated: true)*/
             })
             .disposed(by: disposeBag)
     }
